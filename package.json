@@ -6,14 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "watch": "vite build --watch",
+    "serve:chrome": "web-ext run -t chromium --source-dir ./dist/"
   },
   "dependencies": {
     "solid-js": "^1.9.4"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/webextension-polyfill": "^0.12.1",
+    "fs-extra": "^11.3.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
-    "vite-plugin-solid": "^2.11.0"
+    "vite-plugin-solid": "^2.11.0",
+    "vite-plugin-web-extension": "^4.4.3",
+    "web-ext": "^8.4.0",
+    "webextension-polyfill": "^0.12.0"
   }
 }
